@@ -1,8 +1,14 @@
 function updateMap() {
     fetch("/data.json")
         .then(response => response.json())
-        .then(data => {
-            console.log(data);
+        .then(rsp => {
+            console.log(rsp.data);
+            rsp.data.forEach(element => {
+                latitude = element.latitude;
+                longitude = element.longitude;
+
+                // Mark on the Map
+            })
         })
 }
 
